@@ -1,0 +1,79 @@
+// SLIDER
+.slider {
+  max-width: 130rem;
+  margin: 0 auto;
+
+  position: relative;
+  height: 40rem;
+
+  /* IN THE END */
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  width: 33.333333%;
+  height: 40rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 0.8s;
+
+  @media (max-width: $bp-medium) {
+    width: 100%;
+    padding: 0 3rem;
+  }
+}
+
+// TESTIMONIAL
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 2rem;
+  padding: 3rem;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0rem 0rem 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 1.5rem;
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__photo {
+    width: 7rem;
+    border-radius: $border-radius-primary;
+  }
+
+  &__user-name {
+    font-size: 1.8rem;
+    margin-bottom: 0.7rem;
+  }
+
+  &__user-job {
+    font-size: 1.4rem;
+    color: $color-gray-light-2;
+    font-weight: 400;
+  }
+
+  &__text {
+    font-style: italic;
+    line-height: 1.6;
+    color: $color-gray-dark-1;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  &__icon {
+    display: inline-block;
+    height: 2.3rem;
+    width: 2.3rem;
+    fill: $color-pink-light;
+  }
+}
